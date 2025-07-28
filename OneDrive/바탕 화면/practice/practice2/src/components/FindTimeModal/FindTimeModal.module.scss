@@ -16,12 +16,13 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: relative;
 }
 
 .badge {
   display: inline-block;
-  position: absolute;
-  top: 140px;
+  position: relative;
+  top: -10px;
   left: 160px;
   background: #e0e0e0;
   color: #333;
@@ -34,11 +35,12 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .closeBtn {
   background: none;
   border: none;
+  top: 5px;
   cursor: pointer;
 }
 .label {

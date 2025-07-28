@@ -18,9 +18,14 @@ export default function FindTimeModal({ onClose, onSearch }) {
     e.preventDefault();
     onSearch({ title, participants, dateRange, timeRange, duration });
   };
-
+  // 배경 클릭 시 모달 닫기
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
   return (
-    <div className={styles.backdrop}>
+    <div className={styles.backdrop} onClick={handleBackdropClick}>
       <form className={styles.modal} onSubmit={handleSubmit}>
         <header className={styles.header}>
           <div className={styles.badge}>약속시간 탐색</div>
